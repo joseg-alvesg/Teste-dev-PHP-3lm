@@ -1,0 +1,51 @@
+.employee-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  margin: 2rem 6rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.employee-form label {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.employee-form input {
+  width: 100%;
+  padding: 0.6rem 0;
+  padding-left: 1rem;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+}
+.employee-form select {
+  width: 100%;
+  background-color: #fff;
+  padding: 0.6rem 0;
+  padding-left: 1rem;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.employee-form button {
+  padding: 0.6rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.employee-form button:hover {
+  background-color: #fff;
+  color: #333;
+}

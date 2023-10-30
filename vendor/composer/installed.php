@@ -1,0 +1,52 @@
+<?php return array(
+    'root' => array(
+        'name' => 'cinho/teste-dev-php',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => NULL,
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'cinho/teste-dev-php' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => NULL,
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'geekcom/phpjasper' => array(
+            'pretty_version' => '3.1.0',
+            'version' => '3.1.0.0',
+            'reference' => 'ac11aa16e9bb22599a17d0d16a7cc2ea22f9c781',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../geekcom/phpjasper',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'quilhasoft/jasperphp' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '2e4661dc2c9e3915fc32a0af9dfd1e5f9588c381',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../quilhasoft/jasperphp',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'dev_requirement' => false,
+        ),
+        'tecnickcom/tcpdf' => array(
+            'pretty_version' => '6.3.5',
+            'version' => '6.3.5.0',
+            'reference' => '19a535eaa7fb1c1cac499109deeb1a7a201b4549',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../tecnickcom/tcpdf',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

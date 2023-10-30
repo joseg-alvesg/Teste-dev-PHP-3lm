@@ -1,0 +1,19 @@
+{
+  "name": "cinho/teste-dev-php",
+  "autoload": {
+    "psr-4": {
+      "Cinho\\TesteDevPhp\\": "src/",
+      "Cinho\\TesteDevPhp\\": "vendor/"
+    }
+  },
+  "authors": [
+    {
+      "name": "joseg-alvesg",
+      "email": "cinhoalves85@gmail.com"
+    }
+  ],
+  "require": {
+    "quilhasoft/jasperphp": "master-dev",
+    "geekcom/phpjasper": "^3.1"
+  }
+}
