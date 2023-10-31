@@ -9,11 +9,12 @@
     <link href="src/views/style/employees.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class='header'>
       <h1>l3minformatica</h1>
-      <!-- <nav> -->
-      <!--   <a href="/">Inicio</a> -->
-      <!-- </nav> -->
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/roles">Cargos</a>
+      </nav>
     </header>
     <main>
       <!-- <a href="employees"><div>Vizualização de tabela dos funcionarios</div></a> -->
