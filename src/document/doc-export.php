@@ -2,6 +2,13 @@
 
 require 'vendor/autoload.php';
 
+$env = parse_ini_file('.env');
+
+$dbHost = $env['DB_HOST'];
+$dbUser = $env['DB_USER'];
+$dbPass = $env['DB_PASS'];
+$dbName = $env['DB_NAME'];
+
 use PHPJasper\PHPJasper;
 
 $input = __DIR__ . '/../../src/document/relatorio.jrxml';
@@ -14,10 +21,10 @@ $options = [
   'params' => [],
   'db_connection' => [
       'driver' => 'generic',
-      'username' => 'user1',
-      'password' => '1234',
-      'host' => 'localhost',
-      'database' => 'db3lm',
+      'username' => $dbUser,
+      'password' => $dbPass,
+      'host' => $dbHost,
+      'database' => $dbName,
       'port' => '3306',
       'jdbc_driver' => 'com.mysql.jdbc.Driver',
       'jdbc_url' => 'jdbc:mysql://localhost:3306/',
@@ -31,3 +38,8 @@ $jasper->process(
     $out1,
     $options
 )->execute();
+
+echo '
+  <h1>Relatorio gerado com sucesso</h1>
+  <a href="/">Voltar</a>
+';

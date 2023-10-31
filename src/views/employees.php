@@ -1,5 +1,8 @@
 <div class='table-container'>
-  <h1>Lista de Funcionários</h1>
+  <div class='save'>
+    <h1>Lista de Funcionários</h1>
+    <button type="submit"><a href="/report">Salvar Relatorio</a></button>
+  </div>
   <table>
     <tr>
       <th>ID</th>

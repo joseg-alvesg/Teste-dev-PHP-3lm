@@ -4,18 +4,18 @@ require __DIR__ . '/../../config.php';
 
 class Role
 {
-    private $db;
+    private $_db;
 
     public function __construct($db)
     {
-        $this->db = $db;
+        $this->_db = $db;
     }
 
     public function create($description)
     {
         $query = "INSERT INTO role (description) VALUES (:description)";
 
-        $stmt = $this->db->prepare($query);
+        $stmt = $this->_db->prepare($query);
 
         $stmt->bindParam(':description', $description);
 
@@ -61,7 +61,7 @@ class Role
     {
         try {
             $query = "SELECT * FROM role";
-            $stmt = $this->db->query($query);
+            $stmt = $this->_db->query($query);
 
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
