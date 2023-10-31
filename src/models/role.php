@@ -4,19 +4,17 @@ require __DIR__ . '/../../config.php';
 
 class Role
 {
-    private $_db;
+    private $db;
 
     public function __construct($db)
     {
-        $this->_db = $db;
+        $this->db = $db;
     }
 
     public function create($description)
     {
         $query = "INSERT INTO role (description) VALUES (:description)";
-
-        $stmt = $this->_db->prepare($query);
-
+        $stmt = $this->db->prepare($query);
         $stmt->bindParam(':description', $description);
 
         if ($stmt->execute()) {
@@ -28,40 +26,45 @@ class Role
 
     public function update($id, $description)
     {
-        $query = "UPDATE role SET description = :description WHERE id = :id";
-
-        $stmt = $this->db->prepare($query);
-
-        $stmt->bindParam(':id', $id);
-        $stmt->bindParam(':description', $description);
-
-        if ($stmt->execute()) {
-            return true;
+        try {
+            $query = "UPDATE role SET description = :description WHERE id = :id;";
+            $stmt = $this->db->prepare($query);
+            $stmt->bindParam(':id', $id);
+            $stmt->bindParam(':description', $description);
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            echo $e;
+            return false;
         }
-
-        return false;
     }
 
     public function delete($id)
     {
-        $query = "DELETE FROM role WHERE id = :id";
-
-        $stmt = $this->db->prepare($query);
-
-        $stmt->bindParam(':id', $id);
-
-        if ($stmt->execute()) {
-            return true;
+        try {
+            $query = "Delete from employees where role = :id ;
+      Delete from role where id = :id";
+            $stmt = $this->db->prepare($query);
+            $stmt->bindParam(':id', $id);
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            echo $e;
+            return false;
         }
-
-        return false;
     }
 
     public function getRoles()
     {
         try {
             $query = "SELECT * FROM role";
-            $stmt = $this->_db->query($query);
+            $stmt = $this->db->query($query);
 
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
