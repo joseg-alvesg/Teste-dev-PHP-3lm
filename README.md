@@ -35,4 +35,5 @@ php -S localhost:8000 # abre a porta e relaciona a aplicação a ela
     - [ ] role insert/edit
         - [ ] description
 - [ ] remoção de variáveis repetidas
+- [ ] Verificar integração do jasperphp no windows
 - [ ] ...
